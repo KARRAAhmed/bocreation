@@ -1,0 +1,101 @@
+{
+    "resources": [
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/manifest.json"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/Utils/pjCreate.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/Utils/MessagesPopOverHandler.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/model/models.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/model/formatter.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/Main_VIEW.controller.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/List_VIEW.controller.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/serviceBinding.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/Component.js"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/manifest-bundle.zip"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/Main_VIEW-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/Utils/pjCreate-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/Utils/MessagesPopOverHandler-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/model/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/controller/List_VIEW-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/serviceBinding-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "../../sap-ui-version.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/view/Main_VIEW.view.xml"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/view/List_VIEW.view.xml"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/localService/metadata.xml"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/fragment/Dialog.fragment.xml"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/css/style.css"
+        },
+        {
+            "name": "../../com/aymax/apave/sd/BureauOrdre/BureauOrdreCreate/index.html"
+        }
+    ]
+}

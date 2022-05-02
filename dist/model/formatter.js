@@ -1,0 +1,1 @@
+sap.ui.define([],function(){"use strict";return{toBoolean:function(t){if(t===true){return"X"}else{return""}},dateFormatter:function(t){jQuery.sap.require("sap.ui.core.format.DateFormat");if(t){var e=new Date(t);return e.toLocaleDateString().substr(6)+""+e.toLocaleDateString().substr(3,2)+""+e.toLocaleDateString().substr(0,2)}else{return""}}}});

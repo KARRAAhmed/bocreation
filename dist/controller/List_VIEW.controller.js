@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("APAVE.Bu_Ordre_Create.controller.List_VIEW",{onInit:function(){}})});

@@ -1,0 +1,173 @@
+<mvc:View height="100%" controllerName="com.aymax.apave.sd.BureauOrdre.BureauOrdreCreate.controller.Main_VIEW"
+	xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m">
+	<NavContainer id="wizardNavContainer">
+		<pages>
+			<Page id="wizardContentPage" showHeader="false">
+				<content>
+					<Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content" complete="wizardCompletedHandler">
+						<WizardStep id="FirstStep" title="{i18n>Creer}" validated="true">
+							<MessageStrip class="sapUiSmallMarginBottom" text="{i18n>CreationDE}" showIcon="true"/>
+							<VBox class="sapUiSmallMargin">
+								<f:SimpleForm id="SimpleFormChange480_12120Dual" editable="true" layout="ResponsiveGridLayout" title="Documents Entrants" labelSpanXL="4"
+									labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0"
+									columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false">
+									<f:content>
+										<core:Title text=""/>
+										<!--<Label text="{i18n>statut}"/>-->
+										<!--<Input id="statusId" showSuggestion="false" showValueHelp="false" value="{CreateModel>/ZSTATDE}" editable="false"></Input>-->
+										<Label text="{i18n>categorie}" required="true"/>
+										<ComboBox id="categorieComboBox" placeholder="{i18n>categorie}*" items="{ path: '/CATEGORYSet'}" value="{CreateModel>/Zlibcat}"
+											selectedKey="{CreateModel>/Zrefcat}" change="onChangeCategorieFilter">
+											<core:Item key="{Refcat}" text="{Libcat}">
+												<core:customData>
+													<core:CustomData key="valCat" value="{Valcat}"/>
+												</core:customData>
+											</core:Item>
+										</ComboBox>
+										<Label text="{i18n>sousCategorie}" required="true"/>
+										<ComboBox placeholder="{i18n>sousCategorie}" items="{}" id="subCategoryId" selectedKey="{CreateModel>/Zscatref}"
+											value="{CreateModel>/Zlibscat}" change="onChangeSsCategorie" enabled="false">
+											<core:Item key="{Scatref}" text="{Libscat}"/>
+										</ComboBox>
+										<Label text="{i18n>natureReception}" required="true"/>
+										<ComboBox id="natureReceptionCombo" change="onChangeNatureRecep" placeholder="{i18n>natureReception}*" items="{ path:'/Nature_RECEPSet' }"
+											selectedKey="{CreateModel>/Zrefnr}" value="{CreateModel>/ZlibNr}">
+											<core:Item key="{RefNr}" text="{LibNr}"/>
+										</ComboBox>
+										<Label text="{i18n>typedobjet}" required="true"/>
+										<ComboBox placeholder="{i18n>typedobjet}" items="{ }" id="typeObjetId" selectedKey="{CreateModel>/Zreftypobj}"
+											value="{CreateModel>/Zlibtypobj}">
+											<core:Item key="{Reftypobj}" text="{Libtypobj}"/>
+										</ComboBox>
+										<Label text="{i18n>reference}" required="true"/>
+										<Input id="Ex" placeholder="{i18n>Expediteur}*" suggestionItemSelected="handlesuggestionItemSelected" showSuggestion="true"
+											valueHelpRequest=".onValueHelpRequest" suggestionItems="{/ClientSet}" suggest=".onSuggest">
+											<suggestionItems>
+												<core:Item key="{Expediteur}" text="{Expediteur}"/>
+											</suggestionItems>
+										</Input>
+										<Input id="RefEx" placeholder="{i18n>RefExp}" value="{CreateModel>/RefExp}" showSuggestion="false" showValueHelp="false"
+											valueHelpRequest=".onValueHelpRequest"></Input>
+										<Input id="RefAPAV" placeholder="{i18n>RefAPAVE}" value="{CreateModel>/RefApave}" showSuggestion="false" showValueHelp="false"
+											valueHelpRequest=".onValueHelpRequest"></Input>
+										<Label text="{i18n>Client}"/>
+										<Input id="Client" placeholder="{i18n>Client}" showSuggestion="true" showValueHelp="false" valueHelpRequest=".onValueHelpRequest"
+											value="{CreateModel>/Zclient}" ></Input>
+											<Label text="{i18n>compteDe}" />
+											<Input id="pourlecompteCombo" placeholder="{i18n>compteDe}" value="{CreateModel>/Zcompt}"></Input>
+										<!--<ComboBox id="pourlecompteCombo" change="onChangeComptede" placeholder="{i18n>compteDe}" items="{ path:'/EmployeesSet' }"-->
+										<!--	selectedKey="{CreateModel>/ZcomptId}" value="{CreateModel>/Zcompt}"	>-->
+										<!--	<core:Item key="{Zemp}" text="{Zlibemp}"/>-->
+										<!--</ComboBox>-->
+										
+										<!--	<Input id="CC" placeholder="{i18n>ContratClient}" value="{CreateModel>/Zclient}" showSuggestion="false" showValueHelp="false" valueHelpRequest=".onValueHelpRequest" 
+											editable="false"></Input>-->
+										<core:Title text=""/>
+										<Label text="{i18n>DateArrive}"/>
+										<DatePicker id="D1" placeholder="{i18n>DateArrive}" change="handleChange" class="sapUiSmallMarginBottom" value="{CreateModel>/Zdar}" />
+										<!--<Label text="{i18n>DateEmission}"/>
+										<DatePicker id="D2" placeholder="{i18n>DateEmission}" change="handleChange" class="sapUiSmallMarginBottom" value="{CreateModel>/Zdem}"/>-->
+										<Label text="{i18n>DateEcheance}"/>
+										<DatePicker id="D3" placeholder="{i18n>DateEcheance}" change="handleChange" class="sapUiSmallMarginBottom" value="{CreateModel>/Zdec}"/>
+										<Label text="{i18n>DateExp}"/>
+										<DatePicker id="D4" placeholder="{i18n>DateExp}" change="handleChange" class="sapUiSmallMarginBottom" value="{CreateModel>/Zdexp}"/>
+										<Label text="{i18n>Montant}"/>
+										<Input id="MM" placeholder="{i18n>MontantTND}" value="{CreateModel>/Amount}"></Input>
+										<Label text="{i18n>natureReg}" />
+										<ComboBox id="natureReglementCombo" change="onChangeNatureReg" placeholder="{i18n>natureReg}" items="{ path:'/NATURE_REGSet' }"
+										  selectedKey="{CreateModel>/ZrefNreg}" value="{CreateModel>/ZlibNreg}"  >
+											<core:Item key="{RefNreg}" text="{LibNreg}"/>
+										</ComboBox>
+										<Label text="{i18n>ReferencReglement}"/>
+										<Input id="RPRR" placeholder="{i18n>ReferencReglement}" value="{CreateModel>/RefPpaie}"></Input>
+										<Label text="{i18n>InstitutionPaie}"/>
+										<Input id="IIP" placeholder="{i18n>InstitutionPaie}" value="{CreateModel>/InstitutionDePaie}"></Input>
+										<Label text="{i18n>StatutDocument}"/>
+										<VBox width="100%">
+											<CheckBox text="{i18n>DocumentInterne}" selected="{CreateModel>/Zdi}"/>
+											<CheckBox text="{i18n>DocumentUrgent}" selected="{CreateModel>/Zdu}"/>
+											<CheckBox text="{i18n>DocumentConfidientiel}" selected="{CreateModel>/Zdc}"/>
+											
+										</VBox>
+									</f:content>
+								</f:SimpleForm>
+								<Label text="{i18n>Description}" class="sapUiSmallMarginTop sapUiTinyMarginBottom"/>
+								<TextArea value="{CreateModel>/Zcom}" maxLength="500" width="100%" placeholder="Commentaire"/>
+								<!--<Label text="{i18n>Coverphoto}"/>-->
+								<UploadCollection id="pjUploader" 
+									tooltip="{i18n>attachmentText}" 
+									mode="SingleSelectMaster" 
+									beforeUploadStarts=".pjCreateHdler.onBeforeUploadStarts"
+									uploadComplete=".pjCreateHdler.onUploadComplete"
+									instantUpload="false">
+									<items>
+									   <!-- <UploadCollectionItem 
+									      documentId="{ID}" 
+									      fileName="{FileName}" 
+									      url="/sap/opu/odata/sap/ZFILE_EX_SRV/FileSet(guid'{ID}')/$value"
+									      mimeType="{MIMEType}" 
+									      enableEdit="false" 
+									      enableDelete="false" 
+									      visibleDelete="false" 
+									      visibleEdit="false">
+									    </UploadCollectionItem>-->
+									  </items>
+								</UploadCollection>
+							</VBox>
+						</WizardStep>
+						<WizardStep id="SecondStep" validated="false" title="{i18n>AffecterServices}" activate="additionalInfoValidation">
+							<MessageStrip class="sapUiSmallMarginBottom" text="{i18n>AffecterServicesText}" showIcon="true"/>
+							<Table id="idServiceTable" inset="false" items="{ path: '/DOC_SERVICESSet' }">
+								<!--	<headerToolbar>
+									<OverflowToolbar>
+										<Title id="title" text=""/>
+										<ToolbarSpacer/>
+									
+									</OverflowToolbar>
+								</headerToolbar>-->
+								<columns>
+									<Column width="20%">
+										<Text text="{i18n>Pilote}"/>
+									</Column>
+									<Column width="20%">
+										<Text text="{i18n>Selection}"/>
+									</Column>
+									<Column width="40%">
+										<Text text="{i18n>Service}"/>
+									</Column>
+									<Column width="30%">
+										<Text text="{i18n>Employés}"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<RadioButton groupName="GroupA" selected="{Ztypepilote}" select="onPiloteSelected"></RadioButton>
+											<!--<RadioButton groupName="GroupA" selected="{Ztypepilote}" select="onPiloteSelected"></RadioButton>-->
+											<!--<CheckBox   selected="{Ztypepilote}" select="onPiloteSelected"/>-->
+											<CheckBox id="CheckBox_Service_selection" select="onServiceSelectionSelected" selected="{Ztypeselection}"/>
+											<Text text="{Zlibserv}"/>
+											<MultiComboBox id="MultiBoxCategorie" change="onSelectionChange" selectionFinish="onSelectionFinish" enabled="false" selectedKeys="{Zemployee}" items="{ path: '/EmployeesSet'}">
+												<core:Item key="{Zemp}" text="{Zlibemp}"/>
+											</MultiComboBox>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</WizardStep>
+					</Wizard>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<Button id="messagePopoverBtn" icon="sap-icon://alert" text="{= ${Messages>/}.length }" type="Emphasized"
+							press=".MsgPopOverHdler.handleMessagePopoverPress"/>
+						<ToolbarSpacer/>
+						<Button text=" {i18n>Creer}" type="Emphasized" press="handleWizardCreate"/>
+						<Button text="{i18n>Annuler}" type="Default" press="handleWizardCancel"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</NavContainer>
+</mvc:View>
